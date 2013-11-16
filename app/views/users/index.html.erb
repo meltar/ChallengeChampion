@@ -1,0 +1,18 @@
+<h1>Challengers</h1><br>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Champion</th>
+    <th>Wins</th>
+    <th>Losses</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <%= content_tag_for(:tr, user) do %>
+      <td><%= user.name %></td>
+      <td><%= user.champion %></td>
+      <td><%= user.wins %></td>
+      <td><%= user.losses %></td>
+    <% end %>
+  <% end %>
+</table>

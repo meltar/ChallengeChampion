@@ -1,6 +1,8 @@
 ChallegeMe::Application.routes.draw do
   root to: redirect('/signin')
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
 
   match 'auth/:provider/callback', to: "sessions#create", via: [:get, :post]
   match 'auth/failure', to: 'sessions#failed_authentication', via: [:get, :post]

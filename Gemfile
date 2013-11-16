@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# Style
+gem 'twitter-bootstrap-rails', '2.2.8'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -39,6 +42,7 @@ end
 group :development, :test do
 	gem 'dotenv-rails'
 	gem 'rspec-rails', '~>2.14.0'
+	gem 'pry'
 end
 
 # Use ActiveModel has_secure_password
