@@ -33,8 +33,8 @@ TWITTER_SECRET=
 ```
 
 Project Core Contributors:
-* Melissa Holmes (@meltar)
-* Kylie Stradley (@kstradley)
+* Melissa Holmes [@meltar](https://github.com/meltar)
+* Kylie Stradley [@kstradley](https://github.com/kstradley)
 
 Developers' note to selves:
 this is how you fork & merge forked repositories
