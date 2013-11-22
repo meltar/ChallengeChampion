@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
 	validates :name, presence: true
 
+	extend FriendlyId
+	friendly_id :name
+
 	def self.from_omniauth auth
 		create!(name: auth["info"]["nickname"],
 				uid: auth["uid"],
@@ -18,7 +21,7 @@ class User < ActiveRecord::Base
 			'Faucet',
 			'Towel',
 			'Toothbrush',
-			'Contact lense',
+			'Contact lens',
 			'Glasses	',
 			'Shaving Cream',
 			'Razor',
