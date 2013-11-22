@@ -25,21 +25,18 @@ These commands do the following:
   4. Add all of the tables and table attributes to the test database
 
 Next, create a .env file in the application's root directory. Enter the environment variable names & values. You can generate a key and secret pair at:
-[https://dev.twitter.com](https://dev.twitter.com)
+https://dev.twitter.com
 
 ```
 TWITTER_KEY=
 TWITTER_SECRET=
 ```
 
-
-
-
 Project Core Contributors:
-Mellisa Holmes (meltar)
-Kylie Stradley (kstradley)
+* Melissa Holmes (@meltar)
+* Kylie Stradley (@kstradley)
 
-developer's note to selves:
+Developers' note to selves:
 this is how you fork & merge forked repositories
 https://help.github.com/articles/fork-a-repo
 
