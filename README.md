@@ -35,7 +35,9 @@ TWITTER_SECRET=
 
 
 
-
+Project Core Contributors:
+Mellisa Holmes (meltar)
+Kylie Stradley (kstradley)
 
 developer's note to selves:
 this is how you fork & merge forked repositories
