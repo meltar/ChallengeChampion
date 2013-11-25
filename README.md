@@ -1,4 +1,4 @@
-ChallengeMe
+ChallengeChampion
 ==========================
 
 This application allows you to challenge your friends and turn them into enemies!
@@ -37,7 +37,7 @@ Project Core Contributors:
 * Kylie Stradley [@kstradley](https://github.com/kstradley)
 
 Developers' note to selves:
-this is how you fork & merge forked repositories
+This is how you fork & merge forked repositories
 https://help.github.com/articles/fork-a-repo
 
 
