@@ -95,9 +95,10 @@ class User < ActiveRecord::Base
 			'ice cream',
 			'ten gallon hat',
 			'vacuum cleaner',
-			'sundail',
+			'sundial',
 			'cookie',
 			'orange',
+			'pinecone',
 		]
 	end
 end
