@@ -1,5 +1,16 @@
 require 'spec_helper'
 
 describe Challenge do
-  pending "add some examples to (or delete) #{__FILE__}"
+	subject(:challenge) { described_class.create(description: "being the ugliest") }
+
+	describe 'attributes' do
+    it 'should have a type' do
+      expect(challenge.description).to eq("being the ugliest")
+    end
+  end
+
+  describe 'associations' do
+    it { should respond_to(:users) }
+  end
+
 end

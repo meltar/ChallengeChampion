@@ -7,10 +7,6 @@ describe User do
     it 'should have a name' do
       expect(user.name).to eq("TwitterName")
     end
-
-    it 'should have a wins' do
-      expect(user).to eq("abc")
-    end
   end
 
   describe 'validations' do
@@ -18,6 +14,10 @@ describe User do
       user.name = " "
       expect(user).to_not be_valid
     end
+  end
+
+  describe 'associations' do
+    it { should respond_to(:challenges) }
   end
 
 end
