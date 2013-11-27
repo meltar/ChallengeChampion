@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe User do
-	subject(:user) 					{ described_class.create(name: "TwitterName", wins: 0, losses: 0, champion: "taco") }
-	subject(:invalid_user) 	{ described_class.create(name: "", wins: 0, losses: 0, champion: "taco") }
+	subject(:user) 					{ described_class.create(name: "TwitterName", wins: 0, losses: 0) }
+	subject(:invalid_user) 	{ described_class.create(name: "", wins: 0, losses: 0) }
 
 	describe 'attributes' do
     it 'should have a name' do
@@ -18,6 +18,8 @@ describe User do
 
   describe 'associations' do
     it { should respond_to(:challenges) }
+
+    it { should respond_to(:champion) }
   end
 
 end

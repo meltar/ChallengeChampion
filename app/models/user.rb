@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_and_belongs_to_many :challenges
+	has_one :champion
 
 	validates :name, presence: true
 
@@ -59,7 +60,7 @@ class User < ActiveRecord::Base
 			'Butter Knife',
 			'Baby night light',
 			'Sunflower seed',
-			'Dental floss	',
+			'Dental floss',
 			'Rock',
 			'scissors',
 			'diary',
