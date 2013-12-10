@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
 			if user
 				user.update(uid: auth["uid"])
 			else
-				user = User.from_omniauth auth
+				builder = UserBuilder.new
+				user = builder.build auth
 			end
 
 			session[:user_id] = user.id

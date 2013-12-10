@@ -7,15 +7,6 @@ class User < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name
 
-	def self.from_omniauth auth
-		create!(name: auth["info"]["nickname"],
-				uid: auth["uid"],
-				champion: User.all_champions.sample.titleize,
-				wins: 0,
-				losses: 0,
-		)
-	end
-
 	def self.all_champions
 		[
 			'Alarm clock',
