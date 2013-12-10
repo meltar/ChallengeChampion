@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 			end
 
 			session[:user_id] = user.id
-			flash[:success] = "Welcome to ChallengeMe Champion!"
+			flash[:success] = "Welcome to Challenge Champion!"
 		end
 		
 		redirect_to users_path
