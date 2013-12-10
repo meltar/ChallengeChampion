@@ -10,7 +10,7 @@
   <% @users.each do |user| %>
     <%= content_tag_for(:tr, user) do %>
       <td><%= user.name %></td>
-      <td><%= user.champion %></td>
+      <td><%= user.champion.name %></td>
       <td><%= user.wins %></td>
       <td><%= user.losses %></td>
     <% end %>
