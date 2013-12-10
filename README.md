@@ -25,7 +25,7 @@ These commands do the following:
   4. Add all of the tables and table attributes to the test database
 
 Next, create a .env file in the application's root directory. Enter the environment variable names & values. You can generate a key and secret pair at:
-https://dev.twitter.com
+https://dev.twitter.com/apps
 
 ```
 TWITTER_KEY=
