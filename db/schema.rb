@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211012935) do
+ActiveRecord::Schema.define(version: 20131211015738) do
 
   create_table "challenges", force: true do |t|
     t.datetime "created_at"
@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20131211012935) do
 
   create_table "champions", force: true do |t|
     t.string   "name"
-    t.integer  "intelligence"
-    t.integer  "speed"
-    t.integer  "strength"
+    t.integer  "intelligence", default: 0
+    t.integer  "speed",        default: 0
+    t.integer  "strength",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
