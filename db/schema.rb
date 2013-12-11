@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131127025116) do
+ActiveRecord::Schema.define(version: 20131211012935) do
 
   create_table "challenges", force: true do |t|
     t.datetime "created_at"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20131127025116) do
     t.string   "name"
     t.string   "email"
     t.string   "uid"
-    t.integer  "wins"
-    t.integer  "losses"
+    t.integer  "wins",       default: 0
+    t.integer  "losses",     default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
