@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 	def create
 		if session[:user_id].nil?
 
-	    	user = User.find_by_name auth["info"]["nickname"]
+			user = User.find_by_name auth["info"]["nickname"]
 
 			if user
 				user.update(uid: auth["uid"])
