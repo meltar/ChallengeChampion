@@ -1,6 +1,7 @@
 ChallegeMe::Application.routes.draw do
   root to: redirect('/signin')
   resources :users
+  resources :challenges, only: [:create]
   resources :sessions, only: [:new, :create, :destroy]
 
 
