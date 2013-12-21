@@ -1,18 +1,32 @@
 <h1>Challengers</h1><br>
-<table class="table table-striped">
-  <tr>
-    <th>Name</th>
-    <th>Champion</th>
-    <th>Wins</th>
-    <th>Losses</th>
-  </tr>
 
-  <% @users.each do |user| %>
-    <%= content_tag_for(:tr, user) do %>
-      <td><%= user.name %></td>
-      <td><%= user.champion.name %></td>
-      <td><%= user.wins %></td>
-      <td><%= user.losses %></td>
-    <% end %>
+
+
+
+  <% @users.in_groups_of(4) do |group| %>
+    <div class="row">
+      <% group.compact.each do |user| %>
+        <div class="span3">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                  <div class="hero-widget well well-sm">
+                      <div class="icon">
+                        <i class="glyphicon glyphicon-user"></i>
+                      </div>
+                <div class="text">
+                    <var><%= user.name %></var>
+                    <var><%= user.champion.name %></var>
+                    <var>Wins: <%= user.wins %></var>
+                    <var>Losses: <%= user.losses %></var>
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
-</table>
+
+
