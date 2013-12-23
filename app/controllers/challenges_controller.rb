@@ -9,6 +9,7 @@ class ChallengesController < ApplicationController
 	def show
 		@challenge = Challenge.find(params[:id])
 		@winner = User.find(@challenge.winner_id)
+		@loser = User.find(@challenge.loser_id)
 	end
 
 	private
