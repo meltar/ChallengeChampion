@@ -1,7 +1,7 @@
 class ChallengesController < ApplicationController
 	def create
 		challenged_user = User.find(params[:challenged_user])
-		challenge = complete_challenge challenged_user
+		challenge = complete_challenge challenged_user, current_user
 
 		redirect_to challenge_path(challenge.id)
 	end
@@ -12,20 +12,19 @@ class ChallengesController < ApplicationController
 
 	private
 
-	def complete_challenge challenged_user
-		winner = [current_user, challenged_user].sample
+	def complete_challenge challenged, challenger
+		winner, loser = [challenged, challenger].shuffle
+		challenge = Challenge.create(description: Challenge.all_types.sample, winner_id: winner.id)
 
-		current_user.challenges.build(description: Challenge.all_types.sample, winner_id: winner.id)
-		current_user.save
+		winner.challenges << challenge
+		loser.challenges << challenge
+		update_wins_losses winner, loser
 
-		if winner == current_user
-			current_user.update_attributes(wins: current_user.wins + 1)
-			challenged_user.update_attributes(losses: challenged_user.losses + 1)
-		else
-			challenged_user.update_attributes(wins: challenged_user.wins + 1)
-			current_user.update_attributes(losses: current_user.losses + 1)
-		end
+		challenge
+	end
 
-		current_user.challenges.last
+	def update_wins_losses winner, loser
+		winner.update_attributes(wins: winner.wins + 1)
+		loser.update_attributes(losses: loser.losses + 1)
 	end
 end
