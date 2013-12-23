@@ -1,7 +1,15 @@
-<h1>Challenge Complete!<br>
+<h1>Challenge Complete!</h1>
 
-<p>
-	<%= @winner.name %>'s <%= @winner.champion.name %> defeated
-	someone at <%= @challenge.description %>
-</p>
+<div class="challenge">
+	<h2><%= @challenge.description %></h2>
+</div>
 
+<div class="challenge-result" id="winner">
+	<h3>Winner<br>
+		<%= @winner.name %>'s <%= @winner.champion.name %></h3>
+</div>
+
+<div class="challenge-result" id="loser">
+	<h3>Loser<br>
+	<%= @loser.name %>'s <%= @loser.champion.name %></h3>
+</div>
