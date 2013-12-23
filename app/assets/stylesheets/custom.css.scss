@@ -33,21 +33,30 @@ textarea {
 }
 .hero-widget .icon { 
 		display: block; 
-		font-size: 48px; 
+		font-size: 20px; 
 		line-height: 48px; 
 		margin-bottom: 10px; 
 		text-align: center; 
 }
 .hero-widget var { 
 	display: block; 
+	height: 24px; 
+	font-size: 20x; 
+	line-height: 24px; 
+	font-style: normal; 
+}
+
+.hero-widget title { 
+	display: block; 
 	height: 48px; 
-	font-size: 48px; 
-	line-height: 64px; 
+	font-size: 24px; 
+	line-height: 48px; 
 	font-style: normal; 
 }
 
 .hero-widget label { 
-		font-size: 17px; 
+		font-size: 14px;
+		font-style: italic; 
 }
 
 .hero-widget .options { 
