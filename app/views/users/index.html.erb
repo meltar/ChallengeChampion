@@ -13,7 +13,8 @@
                         <i class="glyphicon glyphicon-user"></i>
                       </div>
                       <div class="text">
-                        <title><%= link_to "#{user.name}", user_path(user.id) %></title>
+                        <var><%= link_to "#{user.name}", user_path(user.id) %></var>
+                    
                         <label>Represented by the brave and Loyal</label> 
                         <title><%= user.champion.name %></title>
                         <var>Wins: <%= user.wins %></var>

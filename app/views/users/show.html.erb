@@ -1,6 +1,8 @@
 <h1><%= @user.name %>, represented by the brave and loyal <%= @user.champion.name %></h1><br>
 
-<h3>Your Stats</h3>
+<%= button_to "Challenge", challenges_path(:challenged_user => @user.id), method: :post %>
+
+<h3>Challenge Stats</h3>
 <p>
   Wins: <%= @user.wins %>
   Losses: <%= @user.losses %>
