@@ -15,7 +15,10 @@ class ChallengesController < ApplicationController
 
 	def complete_challenge challenged, challenger
 		winner, loser = [challenged, challenger].shuffle
-		challenge = Challenge.create(description: Challenge.all_types.sample, winner_id: winner.id)
+		challenge = Challenge.create(description: Challenge.all_types.sample,
+																 winner_id: winner.id,
+																 loser_id: loser.id,
+																)
 
 		winner.challenges << challenge
 		loser.challenges << challenge
