@@ -1,4 +1,5 @@
 class Challenge < ActiveRecord::Base
+	before_save { self.description = description.titleize }
 	has_and_belongs_to_many :users
 
 	def self.all_types
