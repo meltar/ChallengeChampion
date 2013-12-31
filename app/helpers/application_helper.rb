@@ -1,5 +1,9 @@
 module ApplicationHelper
-	def not_myself?
-		@user != current_user
+	def current_user?(user)
+		if user.id == current_user.id
+			true
+		else
+			false
+		end
 	end
 end
