@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.friendly.find(params[:id])
+		@challenges = @user.challenges.limit(10)
 	end
 
 	def create

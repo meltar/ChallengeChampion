@@ -4,8 +4,17 @@
 <% end %>
 
 
-<h3>Challenge Stats</h3>
+<h3>Challenge History</h3>
 <p>
   Wins: <%= @user.wins %>
   Losses: <%= @user.losses %>
 </p>
+
+<h3>Recent Contests</h3>
+<ul>
+	<% @challenges.each do |challenge| %>
+		<li>
+			<%= challenge.description %>
+		</li>
+	<% end %>
+</ul>
