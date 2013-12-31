@@ -1,5 +1,5 @@
 <h1><%= @user.name %>, represented by the brave and loyal <%= @user.champion.name %></h1><br>
-<% if not_myself? %>
+<% unless current_user?(@user) %>
 	<%= button_to "Challenge", challenges_path(:challenged_user => @user.id), method: :post %>
 <% end %>
 

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 	def current_user_google
 		@current_user_google ||= User.find_by google_id: (session[:user_id_google]) if session[:user_id_google]
 	end
-
+		
 	helper_method :current_user
 	helper_method :current_user_google
 end
