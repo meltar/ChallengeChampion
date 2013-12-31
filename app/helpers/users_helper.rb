@@ -4,7 +4,11 @@ module UsersHelper
 			"YOU"
 		else
 			winner = users.find(winner_id)
-			winner.name
+			if winner.blank?
+				"UNKNOWN"
+			else
+				winner.name
+			end
 		end
 	end
 
@@ -13,7 +17,11 @@ module UsersHelper
 			"YOU"
 		else
 			loser = users.find(loser_id)
-			loser.name
+			if loser.blank?
+				"UNKNOWN"
+			else
+				loser.name
+			end
 		end
 	end
 end
