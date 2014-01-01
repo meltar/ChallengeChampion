@@ -18,7 +18,7 @@
 			defeated
 			<%= loser_name(challenge.users, challenge.loser_id) %>
 			at
-			<%= challenge.description %>
+			<%= challenge.description.downcase %>
 		</li>
 	<% end %>
 </ol>
