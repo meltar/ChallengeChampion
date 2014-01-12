@@ -11,14 +11,4 @@
 </p>
 
 <h3>Recent Contests</h3>
-<ol>
-	<% @challenges.each do |challenge| %>
-		<li>
-			<%= winner_name(challenge.users, challenge.winner_id) %>
-			defeated
-			<%= loser_name(challenge.users, challenge.loser_id) %>
-			at
-			<%= challenge.description.downcase %>
-		</li>
-	<% end %>
-</ol>
+<%= render 'layouts/contests' %>
