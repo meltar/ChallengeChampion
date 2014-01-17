@@ -1,6 +1,7 @@
 class Challenge < ActiveRecord::Base
 	before_save { self.description = description.titleize }
 	has_and_belongs_to_many :users
+	default_scope -> { order('created_at DESC') }
 
 	def self.all_types
 		[	
