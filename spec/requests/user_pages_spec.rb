@@ -19,7 +19,7 @@ describe "UserPages" do
 
 				it "should list each user" do
 					User.paginate(page: 1).each do |user|
-						expect(page).to have_selector('li', text: user.name)
+						expect(page).to have_selector('h2', text: user.name)
 					end
 				end
 			end

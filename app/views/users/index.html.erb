@@ -1,26 +1,26 @@
 <h1>Challengers</h1><br>
-  <% @users.in_groups_of(3) do |group| %>
-    <div class="row">
-      <% group.compact.each do |user| %>
-        <div class="span3">
-          
-                  <div class="hero-widget well well-sm">
-                      <div class="icon">
-                        <i class="glyphicon glyphicon-user"></i>
-                      </div>
-                      <div class="text">
-                        <h2><%= link_to "#{user.name}", user_path(user.id) %></h2>
-                    
-                        <label>Represented by the brave and loyal</label> 
-                        <title><%= user.champion.name %></title>
-                        <var>Wins: <%= user.wins %></var>
-                        <var>Losses: <%= user.losses %></var>
-                    </div>
-                            
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
 
+<%= will_paginate %>
 
+<% @users.in_groups_of(3) do |group| %>
+	<div class="row">
+		<% group.compact.each do |user| %>
+			<div class="span3">
+				<div class="hero-widget well well-sm">
+					<div class="icon">
+						<i class="glyphicon glyphicon-user"></i>
+					</div>
+					<div class="text">
+						<h3><%= link_to "#{user.name}", user_path(user.id) %></h3>
+						<label>Represented by the brave and loyal</label>
+						<title><%= user.champion.name %></title>
+						<var>Wins: <%= user.wins %></var>
+						<var>Losses: <%= user.losses %></var>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+<% end %>
+
+<%= will_paginate %>
