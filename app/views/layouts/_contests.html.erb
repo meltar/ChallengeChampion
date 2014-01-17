@@ -1,11 +1,6 @@
-<ol>
-	<% @challenges.each do |challenge| %>
-		<li>
-			<%= winner_name(challenge.users, challenge.winner_id) %>
-			defeated
-			<%= loser_name(challenge.users, challenge.loser_id) %>
-			at
-			<%= challenge.description.downcase %>
-		</li>
-	<% end %>
-</ol>
+<% if @challenges.any? %>
+	<ol class="challenges">
+		<%= render partial: 'layouts/challenge', collection: @challenges %>
+	</ol>
+	<%= will_paginate @challenges %>
+<% end %>

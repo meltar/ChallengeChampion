@@ -1,0 +1,13 @@
+<li id="<%= challenge.id %>">
+	<span class="user">
+		<%= winner_name(challenge.users, challenge.winner_id) %>
+		defeated
+		<%= loser_name(challenge.users, challenge.loser_id) %>
+		at
+		<%= challenge.description.downcase %>
+		<br>
+	</span>
+	<span class="timestamp">
+		<%= time_ago_in_words(challenge.created_at) %> ago
+	</span>
+</li>

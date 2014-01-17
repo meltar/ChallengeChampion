@@ -113,3 +113,23 @@ p {
 challenge.btn {
 	padding-top: 9px;
 }
+
+.challenges {
+	list-style: none;
+	margin: 10px 0 0 0;
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e8e8e8;
+	}
+}
+
+.timestamp {
+	color: #999;
+}
+
+aside {
+	textarea {
+		height: 100px;
+		margin-bottom: 5px;
+	}
+}

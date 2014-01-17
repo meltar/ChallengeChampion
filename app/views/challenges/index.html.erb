@@ -1,0 +1,24 @@
+<h1><%= @user.name %>, represented by the brave and loyal <%= @user.champion.name %></h1><br>
+<% unless current_user?(@user) %>
+	<%= button_to "Challenge", challenges_path(:challenged_user => @user.id), method: :post %>
+<% end %>
+
+
+<h3>Challenge History</h3>
+<p>
+  Wins: <%= @user.wins %>
+  Losses: <%= @user.losses %>
+</p>
+
+<h3>Recent Contests</h3>
+<ol>
+	<% @challenges.each do |challenge| %>
+		<li>
+			<%= winner_name(challenge.users, challenge.winner_id) %>
+			defeated
+			<%= loser_name(challenge.users, challenge.loser_id) %>
+			at
+			<%= challenge.description.downcase %>
+		</li>
+	<% end %>
+</ol>
