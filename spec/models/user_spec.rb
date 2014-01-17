@@ -11,9 +11,19 @@ describe User do
   end
 
   describe 'validations' do
+		it "should be valid" do
+			expect(user).to be_valid
+		end
+
     it 'should not be valid without a name' do
       expect(invalid_user).to_not be_valid
     end
+
+		it "should not be valid when the name is too long" do
+			user.name = 'a' * 16
+
+			expect(user).to_not be_valid
+		end
   end
 
   describe 'associations' do
