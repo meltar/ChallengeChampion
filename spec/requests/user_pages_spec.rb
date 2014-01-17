@@ -1,11 +1,28 @@
 require 'spec_helper'
 
 describe "UserPages" do
-  describe "GET /user_pages" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get user_pages_index_path
-      response.status.should be(200)
-    end
-  end
+	subject { page }
+
+	describe "index" do
+		let(:user) { FactoryGirl.create(:user) }
+		before(:each) do
+			visit users_path
+		end
+
+		describe "pagination" do
+
+			before(:all) { 35.times { FactoryGirl.create(:user) } }
+			before(:all) { User.delete_all }
+
+			it "should have the pagination div on the page" do
+				expect(subject).to have_selector('div.pagination')
+
+				it "should list each user" do
+					User.paginate(page: 1).each do |user|
+						expect(page).to have_selector('li', text: user.name)
+					end
+				end
+			end
+		end
+	end
 end

@@ -1,6 +1,14 @@
 FactoryGirl.define do
 	factory :user do
 		sequence(:name) { |n| "Person #{n}" }
-		champion Champion.new(user_id: user.id, name: "none")
+		has_champion
+
+		trait :has_champion do
+			association :champion, factory: :champion
+		end
+	end
+
+	factory :champion do
+		name	"placeholder"
 	end
 end

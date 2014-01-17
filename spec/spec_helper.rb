@@ -53,5 +53,8 @@ RSpec.configure do |config|
 		visit "/auth/failure"
 	end
 
+	# Capybara
+	config.include Capybara::DSL
+
 end
 
