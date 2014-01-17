@@ -1,0 +1,14 @@
+<div class="span3">
+	<div class="hero-widget well well-sm">
+		<div class="icon">
+			<i class="glyphicon glyphicon-user"></i>
+		</div>
+		<div class="text">
+			<h3><%= link_to "#{user.name}", user_path(user.id) %></h3>
+		<label>Represented by the brave and loyal</label>
+			<title><%= user.champion.name %></title>
+			<var>Wins: <%= user.wins %></var>
+			<var>Losses: <%= user.losses %></var>
+		</div>
+	</div>
+</div>
