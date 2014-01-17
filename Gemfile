@@ -49,6 +49,7 @@ group :development, :test do
 	gem 'rspec-rails', '~>2.14.0'
 	gem 'pry'
 	gem 'sqlite3'
+	gem 'faker', '1.2.0'
 end
 
 group :test do
