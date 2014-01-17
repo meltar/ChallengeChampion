@@ -15,12 +15,12 @@ describe "UserPages" do
 			before(:all) { User.delete_all }
 
 			it "should have the pagination div on the page" do
-				expect(subject).to have_selector('div.pagination')
+				expect(page).to have_selector('div', 'pagination')
+			end
 
-				it "should list each user" do
-					User.paginate(page: 1).each do |user|
-						expect(page).to have_selector('h2', text: user.name)
-					end
+			it "should list each user" do
+				User.paginate(page: 1).each do |user|
+					expect(page).to have_selector('h3', text: user.name)
 				end
 			end
 		end
