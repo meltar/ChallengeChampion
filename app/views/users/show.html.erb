@@ -1,14 +1,29 @@
-<h1><%= @user.name %>, represented by the brave and loyal <%= @user.champion.name %></h1><br>
-<% unless current_user?(@user) %>
-	<%= button_to "Challenge", challenges_path(:challenged_user => @user.id), method: :post %>
+<% if signed_in? %>
+	<div class="row">
+		<aside class="span5">
+			<section>
+				<h1><%= @user.name %></h1>
+				<h4>represented by the brave and loyal</h4>
+				<h4><%= @user.champion.name %></h4>
+			</section>
+			<section>
+				<h2>Challenge History</h2>
+				<h4>Wins: <%= @user.wins %></h4>
+				<h4>Losses: <%= @user.losses %></h4>
+			</section>
+			<section>
+				<div class="challenge">
+					<% unless current_user?(@user) %>
+						<%= button_to raw("Challenge #{@user.name} to a contest!"), challenges_path(:challenged_user => @user.id), 
+													class: "btn btn-successi btn-large", method: :post %>
+					<% end %>
+				</div>
+			</section>
+		</aside>
+	<div class="span6">
+		<h2>Recent Contests</h2>
+		<%= render 'layouts/contests' %>
+	</div>
+<% else %>
+	<h1>Welcome to ChallengeChampion!</h1>
 <% end %>
-
-
-<h3>Challenge History</h3>
-<p>
-  Wins: <%= @user.wins %>
-  Losses: <%= @user.losses %>
-</p>
-
-<h3>Recent Contests</h3>
-<%= render 'layouts/contests' %>

@@ -73,14 +73,13 @@ h1 {
 	font-size: 3em;
 	letter-spacing: -2px;
 	margin-bottom: 30px;
-	text-aligh: center;
+	color: #999;
 }
 
 h2 {
-	font-ze: 1.2em;
+	#font-size: 1.2em;
 	letter-spacing: -1px;
 	margin-bottom: 30px;
-	text-align: center;
 	font-weight: normal;
 	color: #999;
 }
@@ -107,4 +106,10 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* challenge */
+
+challenge.btn {
+	padding-top: 9px;
 }
