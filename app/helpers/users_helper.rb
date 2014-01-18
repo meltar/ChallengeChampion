@@ -3,7 +3,7 @@ module UsersHelper
 		if current_user.id == winner_id
 			"YOU"
 		else
-			winner = users.find(winner_id)
+			winner = User.all.find(winner_id)
 			if winner.blank?
 				"UNKNOWN"
 			else
@@ -16,7 +16,7 @@ module UsersHelper
 		if current_user.id == loser_id
 			"YOU"
 		else
-			loser = users.find(loser_id)
+			loser = User.all.find(loser_id)
 			if loser.blank?
 				"UNKNOWN"
 			else
