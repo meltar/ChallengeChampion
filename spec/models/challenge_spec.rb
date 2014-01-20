@@ -5,7 +5,7 @@ describe Challenge do
 
 	describe 'attributes' do
     it 'should have a type' do
-      expect(challenge.description).to eq("being the ugliest")
+      expect(challenge.description).to eq("being the ugliest".titleize)
     end
   end
 
