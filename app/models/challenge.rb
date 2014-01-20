@@ -7,7 +7,7 @@ class Challenge < ActiveRecord::Base
 		[	
 			"pushups",
 			"running",
-			"pie-eating contest",
+			"pie-eating",
 			"donkey racing",
 			"yak shaving",
 			"karate",
@@ -23,7 +23,7 @@ class Challenge < ActiveRecord::Base
 			"jenga",
 			"lawnmowing",
 			"blood donation",
-			"steve jobs look-alike contest",
+			"looking like steve jobs",
 			"coffee brewing",
 			"body hiding",
 			"water filtration",
@@ -52,7 +52,7 @@ class Challenge < ActiveRecord::Base
 			"being the ugliest",
 			"arm wrestling",
 			"fly fishing",
-			"spelling bee",
+			"spelling",
 			"chest hair removal",
 			"fire breathing",
 			"lego tower building",
@@ -63,6 +63,22 @@ class Challenge < ActiveRecord::Base
 			"bluetooth device ownership",
 			"janitorial services",
 			"self-tattooing"
+			"being the worst"
+			"having the most elaborate neck tattoo"
+			"cockfighting"
+			"wurst-making"
+			"fish-tossing"
+			"having the longest nose-hairs"
+			"being a beautiful young lady and a old ugly lady all at once"
+			"toenail growing"
+			"mohawk ownership"
+			"navel-gazing"
+			"designer sneaker ownership"
+			"having the most kelly kapowski hair"
+			"being the most offensive"
+			"having the most heinous B.O."
+			"being a diversity hire"
+			"unibrow cultivation"
 		]	
 	end
 end
