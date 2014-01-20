@@ -14,7 +14,7 @@ class Challenge < ActiveRecord::Base
 			"karaoke",
 			"knitting",
 			"horse back riding",
-			"chili cookoff",
+			"a chili cookoff",
 			"jello wrestling",
 			"carpet cleaning",
 			"chess",
@@ -30,7 +30,7 @@ class Challenge < ActiveRecord::Base
 			"pasta making",
 			"pea shooting",
 			"moustache growing",
-			"pokemon battle",
+			"pokemon battling",
 			"air guitar",
 			"rock paper scissors",
 			"curling",
@@ -62,23 +62,51 @@ class Challenge < ActiveRecord::Base
 			"bird watching",
 			"bluetooth device ownership",
 			"janitorial services",
-			"self-tattooing"
-			"being the worst"
-			"having the most elaborate neck tattoo"
-			"cockfighting"
-			"wurst-making"
-			"fish-tossing"
-			"having the longest nose-hairs"
-			"being a beautiful young lady and a old ugly lady all at once"
-			"toenail growing"
-			"mohawk ownership"
-			"navel-gazing"
-			"designer sneaker ownership"
-			"having the most kelly kapowski hair"
-			"being the most offensive"
-			"having the most heinous B.O."
-			"being a diversity hire"
-			"unibrow cultivation"
+			"self-tattooing",
+			"being the worst",
+			"having the most elaborate neck tattoo",
+			"cockfighting",
+			"wurst-making",
+			"fish tossing",
+			"having the longest nose hairs",
+			"being a beautiful young lady and a old ugly lady all at once",
+			"toenail growing",
+			"mohawk ownership",
+			"navel-gazing",
+			"designer sneaker ownership",
+			"having the biggest 80s rock hair",
+			"being the most offensive",
+			"having the most heinous B.O.",
+			"being a diversity hire",
+			"unibrow cultivation",
+			"flamingo figurine collecting",
+			"bee wrangling",
+			"yelling the loudest at computers",
+			"identifying the most with Dilbert",
+			"sushi rolling",
+			"dodgeball",
+			"sportsball",
+			"handegg",
+			"googling",
+			"myspace profile updating",
+			"emoji memorizaition",
+			"slapfighting",
+			"having t-rex arms",
+			"vinyl collecting",
+			"bicycle repair",
+			"breaking the 5 second rule",
+			"pinata bashing",
+			"being the sassiest cat",
+			"having the biggest glasses",
+			"being the most twee",
+			"having the sickest fixie",
+			"having heard about it first",
+			"having been into it before it was cool",
+			"putting a bird on it",
+			"pickling the most things",
+			"being the most pedantic",
+			"posting the most instagrams",
+			"step 1: stealing underwear, step 2: ????, step 3: profit!!",
 		]	
 	end
 end
