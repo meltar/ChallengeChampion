@@ -17,3 +17,7 @@
 
 # Ignore dot files
 .env
+.rvmrc
+
+# SimpleCov
+/coverage
