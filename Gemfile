@@ -47,6 +47,7 @@ group :test do
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'simplecov', :require => false, :group => :test
 	gem 'database_cleaner'
+	gem 'rake'
 end
 
 group :production do
