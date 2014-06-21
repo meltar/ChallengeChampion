@@ -1,7 +1,8 @@
 ChallengeChampion
 ==========================
 
-## [challengechampion.herokuapp.com](challangechampion.herokuapp.com)
+## Deployed site
+### [challengechampion.herokuapp.com](challangechampion.herokuapp.com)
 
 ## Installation
 This application allows you to challenge your friends and turn them into enemies!
