@@ -1,6 +1,7 @@
 ChallengeChampion
 ==========================
 
+## Installation
 This application allows you to challenge your friends and turn them into enemies!
 
 To get this app up and running, run these commands in console:
@@ -32,12 +33,7 @@ TWITTER_KEY=
 TWITTER_SECRET=
 ```
 
-Project Core Contributors:
+## Authors
 * Melissa Holmes [@meltar](https://github.com/meltar)
 * Kylie Stradley [@kstradley](https://github.com/kstradley)
-
-Developers' note to selves:
-This is how you fork & merge forked repositories
-https://help.github.com/articles/fork-a-repo
-
 
