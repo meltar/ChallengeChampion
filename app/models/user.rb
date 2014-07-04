@@ -7,6 +7,14 @@ class User < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name
 
+	def self.search query
+		if query.present?
+			where("name @@ :q", q: query)
+		else
+			all
+		end
+	end
+
 	def self.all_champions
 		[
 			'Alarm clock',
