@@ -20,7 +20,7 @@ test:
 
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: challenge_champion_prod
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
+  timeout: 5000
