@@ -1,19 +1,24 @@
 class UsersController < ApplicationController
+	respond_to :html, :json
+
 	def index
 		if params[:search]
 			@users = User.search(params[:search]).paginate(page: params[:page])
 		else
 			@users = User.paginate(page: params[:page])
 		end
+		respond_with(@users)
 	end
 
 	def new
 		@user = User.new
+		respond_with(@user)
 	end
 
 	def show
 		@user = User.friendly.find(params[:id])
 		@challenges = @user.challenges.paginate(page: params[:page])
+		respond_with([@user, @challenges])
 	end
 
 	def create
