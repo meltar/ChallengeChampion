@@ -4,6 +4,9 @@ ruby '2.1.2'
 # Rails
 gem 'rails', '4.0.0'
 
+# Postgres
+gem 'pg'
+
 # Assets
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sass-rails', '~> 4.0.0'
@@ -37,7 +40,6 @@ group :development, :test do
 	gem 'dotenv-rails'
 	gem 'rspec-rails', '~>2.14.0'
 	gem 'pry'
-	gem 'sqlite3'
 	gem 'faker', '1.2.0'
 end
 
@@ -48,8 +50,4 @@ group :test do
 	gem 'simplecov', :require => false, :group => :test
 	gem 'database_cleaner'
 	gem 'rake'
-end
-
-group :production do
-	gem 'pg'
 end

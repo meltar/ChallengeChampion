@@ -2,7 +2,11 @@ class UsersController < ApplicationController
 	respond_to :html, :json
 
 	def index
-		@users = User.paginate(page: params[:page])
+		if params[:search]
+			@users = User.search(params[:search]).paginate(page: params[:page])
+		else
+			@users = User.paginate(page: params[:page])
+		end
 		respond_with(@users)
 	end
 
