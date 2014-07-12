@@ -1,4 +1,6 @@
 class ChallengesController < ApplicationController
+	respond_to :html, :json
+
 	def create
 		challenged_user = User.find(params[:challenged_user])
 		challenge = complete_challenge challenged_user, current_user
@@ -10,6 +12,7 @@ class ChallengesController < ApplicationController
 		@challenge = Challenge.find(params[:id])
 		@winner = User.find(@challenge.winner_id)
 		@loser = User.find(@challenge.loser_id)
+		respond_with([@challenge, @winner, @loser])
 	end
 
 	private
