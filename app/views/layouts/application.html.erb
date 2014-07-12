@@ -15,7 +15,9 @@
 		<% end %>
 
 		<% if signed_in? %>
-			Signed into Twitter as <%= current_user.name %>!
+			<div class="pull-right">
+				Signed into Twitter as <%= current_user.name %>!
+			</div>
 			<%= yield %>
 		<% end %>
 
