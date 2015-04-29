@@ -1,4 +1,4 @@
-<h1><%= @user.name %>, represented by the brave and loyal <%= @user.champion.name %></h1><br>
+<h1><%= @user.name %>, represented by the brave and loyal <%= champion(name) %></h1><br>
 <% unless current_user?(@user) %>
 	<%= button_to "Challenge", challenges_path(:challenged_user => @user.id), method: :post %>
 <% end %>
@@ -14,9 +14,9 @@
 <ol>
 	<% @challenges.each do |challenge| %>
 		<li>
-			<%= winner_name(challenge.users, challenge.winner_id) %>
+			<%= winner_name(challenge.users, challenge.winner_id) champion(@user) %>
 			defeated
-			<%= loser_name(challenge.users, challenge.loser_id) %>
+			<%= loser_name(challenge.users, challenge.loser_id) champion(@user) %>
 			at
 			<%= challenge.description.downcase %>
 		</li>

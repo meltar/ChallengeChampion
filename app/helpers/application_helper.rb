@@ -6,4 +6,8 @@ module ApplicationHelper
 			false
 		end
 	end
+
+	def champion(user)
+		emojify ":#{user.champion.name.downcase.tr(" ", "_")}:"
+	end
 end
