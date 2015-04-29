@@ -40,6 +40,12 @@ TWITTER_KEY=
 TWITTER_SECRET=
 ```
 
+Copy images for emoji
+
+```
+rake emoji
+```
+
 ## Authors
 * Melissa Holmes [@meltar](https://github.com/meltar)
 * Kylie Stradley [@kstradley](https://github.com/kstradley)
