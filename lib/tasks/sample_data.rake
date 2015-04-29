@@ -8,7 +8,7 @@ namespace :db do
 
 		users = User.all
 		users.each do |u|
-			champ_name = Faker::Commerce.product_name
+			champ_name = Emoji.all.sample.name
 			u.champion = Champion.create!(name: champ_name)
 		end
 	end
