@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 # Rails
-gem 'rails', '4.0.0'
+gem 'rails', '4.2.1'
 
 # Postgres
 gem 'pg'
@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 
 # Giver user.show a friendly URL
 gem 'friendly_id', "~> 5.0.0"
+
+# Display emoji
+gem 'gemoji'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
