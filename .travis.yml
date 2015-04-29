@@ -4,4 +4,4 @@ before_install:
     - gem --version
     - gem install bundler
 rvm:
-    - 2.1.2
+    - 2.2.2
