@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe User do
 	subject(:user) 					{ described_class.create(name: "TwitterName", wins: 0, losses: 0) }
