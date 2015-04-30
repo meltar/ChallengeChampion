@@ -1,4 +1,5 @@
-script: "bin/rake --trace 2>&1"
+script:
+- bundle exec rspec --format progress
 bundler_args: "--binstubs --without documentation"
 before_install:
     - gem --version
