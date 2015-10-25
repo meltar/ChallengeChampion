@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Challenge do
 	subject(:challenge) { described_class.create(description: "being the ugliest") }

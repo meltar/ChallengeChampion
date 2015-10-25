@@ -5,8 +5,8 @@
 		</div>
 		<div class="text">
 			<h3><%= link_to "#{user.name}", user_path(user.id) %></h3>
-		<label>Represented by the brave and loyal</label>
-			<title><%= user.champion.name %></title>
+			<label>Represented by the brave and loyal</label>
+			<var><%= champion(user) %></var>
 			<var>Wins: <%= user.wins %></var>
 			<var>Losses: <%= user.losses %></var>
 		</div>

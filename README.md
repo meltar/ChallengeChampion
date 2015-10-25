@@ -24,7 +24,6 @@ rake db:test:prepare
  ```bash
 rake db:populate
 ```
-```
 
 These commands do the following:
   1. Install all of the necessary gems listed in the Gemfile
@@ -38,6 +37,12 @@ https://dev.twitter.com/apps
 ```
 TWITTER_KEY=
 TWITTER_SECRET=
+```
+
+Copy images for emoji
+
+```
+rake emoji
 ```
 
 ## Authors

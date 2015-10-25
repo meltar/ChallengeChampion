@@ -4,7 +4,7 @@ class UserBuilder
 		user = User.create(name: auth["info"]["nickname"],
 											 uid: auth["uid"],
 											)
-		champion = Champion.create(name: User.all_champions.sample,
+		champion = Champion.create(name: Emoji.all.sample.name,
 															 user_id: user.id,
 															)
 	end
